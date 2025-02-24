@@ -11,3 +11,12 @@ const items = [
 let totalPrice = items.reduce((sum, item) => sum + item.price, 0);
 let discountCategory = totalPrice > 100000 ? "Diskon Besar" : totalPrice >= 50000 ? "Diskon Sedang" : "Diskon Tidak Ada";
 
+console.log("== Irasshaimase Di XYZ Store ==");
+console.log("\Daftar Barang");
+items.forEach(item => {
+    console.log(`- ${item.name}: Rp.${item.price}`)
+});
+
+console.log(`Total Jumlah Barang: ${items.length}`);
+console.log(`Total Harga: Rp.${totalPrice}`);
+console.log(`Kategori Diskon: ${discountCategory}`);
