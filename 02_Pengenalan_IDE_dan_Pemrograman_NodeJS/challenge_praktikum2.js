@@ -9,3 +9,5 @@ const items = [
 ];
 
 let totalPrice = items.reduce((sum, item) => sum + item.price, 0);
+let discountCategory = totalPrice > 100000 ? "Diskon Besar" : totalPrice >= 50000 ? "Diskon Sedang" : "Diskon Tidak Ada";
+
