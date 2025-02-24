@@ -1,7 +1,7 @@
 // Aulia Ahmad Ghaus Adzam
 // 2311104028
 
-// Barang Yang DiBeli Misalnya
+// Barang Yang DiBeli Misalnyee
 const items = [
     { name: 'Barang Ke 1', price: 50000},
     { name: 'Barang ke 2', price: 10000},
