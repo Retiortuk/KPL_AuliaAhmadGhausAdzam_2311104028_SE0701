@@ -31,6 +31,7 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            cursor: pointer;
         }
         /* Styling untuk main content */
         main {
@@ -102,8 +103,8 @@
     <aside>
         <h2>Artikel Terkait</h2> <!-- Judul bagian artikel terkait -->
         <ul> <!-- Daftar artikel terkait -->
-            <li><a href="#">Tips Belajar HTML</a></li> <!-- Link menuju artikel tips belajar HTML -->
-            <li><a href="#">Manfaat Penggunaan CSS</a></li> <!-- Link menuju artikel manfaat penggunaan CSS -->
+            <li><a href="#" onclick="showAlert('Tips Belajar HTML')">Tips Belajar HTML</a></li> <!-- Link menuju artikel tips belajar HTML -->
+            <li><a href="#" onclick="showAlert('Manfaat Penggunaan CSS')">Manfaat Penggunaan CSS</a></li> <!-- Link menuju artikel manfaat penggunaan CSS -->
         </ul>
     </aside>
 
@@ -111,5 +112,12 @@
     <footer>
         <p>&copy; 2024 Website Contoh. Semua hak dilindungi.</p> <!-- Informasi hak cipta -->
     </footer>
+
+    <script>
+        // Fungsi untuk menampilkan alert ketika link diklik
+        function showAlert(message) {
+            alert("Anda mengklik: " + message);
+        }
+    </script>
 </body>
 </html>
