@@ -19,6 +19,7 @@
 
         .container {
             width: 400px;
+            height: 240px;
             margin: auto;
             padding: 27px;
             background-color: #1b1a1a;
@@ -50,6 +51,13 @@
         button:hover {
             background-color:  #f6f5f5;
         }
+
+        .output {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffd000;
+        }
         
      </style>
 </head>
@@ -59,7 +67,7 @@
     <div class="container">
         <h2>名前は何ですか?</h2>
         <input type="text" id="namaInput" placeholder="Masukkan Nama Anda">
-        <button onclick="">Submit</button>
+        <button onclick="showNamae()">Submit</button>
         <p class="output" id="outputText"></p>
     </div>  
     
@@ -68,7 +76,7 @@
         function showNamae(){
             let name = document.getElementById("namaInput").value;
             let output = document.getElementById("outputText");
-            if (nama) {
+            if (name) {
                 output.textContent = "Konichiwa " + name;
             } else {
                 output.textContent = "Masukkan Nama Anda!";
