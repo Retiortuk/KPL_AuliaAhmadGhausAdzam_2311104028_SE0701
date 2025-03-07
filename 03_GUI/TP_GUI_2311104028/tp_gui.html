@@ -13,25 +13,68 @@
             margin: 50px;
         }
 
+        h2 {
+            color: #ffd000;
+        }
+
         .container {
-            width: 300px;
+            width: 400px;
             margin: auto;
             padding: 27px;
-            border: 1px solid #ccc;
+            background-color: #1b1a1a;
+            border: 1px solid #1b1a1a;
             border-radius: 10px;
-            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 20px rgba(23, 23, 23, 0.5);
         }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #ffd000;
+            color: #1b1a1a;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input {
+            background-color: #f1f0f0;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color:  #f6f5f5;
+        }
+        
      </style>
 </head>
 
 <body>
 
     <div class="container">
-        <h2>Siapa Nama mu?</h2>
+        <h2>名前は何ですか?</h2>
         <input type="text" id="namaInput" placeholder="Masukkan Nama Anda">
         <button onclick="">Submit</button>
         <p class="output" id="outputText"></p>
-    </div>    
+    </div>  
+    
+    <!-- JS INTERNAL HERE! -->
+     <script>
+        function showNamae(){
+            let name = document.getElementById("namaInput").value;
+            let output = document.getElementById("outputText");
+            if (nama) {
+                output.textContent = "Konichiwa " + name;
+            } else {
+                output.textContent = "Masukkan Nama Anda!";
+            }
+        }
+     </script>
 
 </body>
 </html>
