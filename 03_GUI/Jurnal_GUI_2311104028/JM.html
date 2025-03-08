@@ -1,0 +1,50 @@
+<!-- Code By: Aulia Ahmad Ghaus Adzam -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator GUI</title>
+ </head>
+
+ <body>
+
+    <div class="calculator">
+
+        <input type="text" id="display" class="display" disabled>
+        <div class="buttons">
+            <button onclick="inputNumber(1)">1</button>
+            <button onclick="inputNumber(2)">2</button>
+            <button onclick="inputNumber(3)">3</button>
+            <button class="operator" onclick="setOperator('+')">+</button>
+            <button onclick="inputNumber(4)">4</button>
+            <button onclick="inputNumber(5)">5</button>
+            <button onclick="inputNumber(6)">6</button>
+            <button class="operator" onclick="setOperator('-')">-</button>
+            <button onclick="inputNumber(7)">7</button>
+            <button onclick="inputNumber(8)">8</button>
+            <button onclick="inputNumber(9)">9</button>
+            <button class="operator" onclick="setOperator('*')">*</button>
+            <button onclick="inputNumber(0)">0</button>
+            <button class="operator" onclick="setOperator('/')">/</button>
+            <button class="operator" onclick="calculate()">=</button>
+        </div>
+
+    </div> 
+
+    <!-- JS HERE! -->
+     <script>
+        let currentInput;
+        let operator;
+        let firstNumber;
+
+        function inputNumber(num){
+            currentInput += num;
+            document.getElementById("display").value = currentInput;
+        }
+
+        
+     </script>
+
+ </body>
+ </html>
