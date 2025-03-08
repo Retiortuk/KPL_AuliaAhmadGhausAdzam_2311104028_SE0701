@@ -34,16 +34,46 @@
 
     <!-- JS HERE! -->
      <script>
-        let currentInput;
-        let operator;
-        let firstNumber;
+        let currentInput = '';
+        let operator = '';
+        let firstNumber = '';
 
         function inputNumber(num){
             currentInput += num;
             document.getElementById("display").value = currentInput;
         }
 
-        
+        function setOperator(op){
+            if (currentInput === '') return;
+            firstNumber = currentInput;
+            operator = op;
+            currentInput = '';
+        }
+
+        function calculate() {
+            if (firstNumber === '' || currentInput === '') return;
+            let result;
+            switch (operator){
+                case '+':
+                    result = parseInt(firstNumber) + parseInt(currentInput);
+                    break;
+                case '-':
+                    result = parseInt(firstNumber) - parseInt(currentInput);
+                    break;
+                case '*':
+                    result = parseInt(firstNumber) * parseInt(currentInput);
+                    break;
+                case '/':
+                    result = parseInt(currentInput) !== 0 ? parseInt(firstNumber) / parseInt(currentInput) : 'Error';
+                    break;
+                default:
+                    return;
+            }
+            document.getElementById('display').value = result;
+            firstNumber = '';
+            currentInput = '';
+            operator = '';
+        }
      </script>
 
  </body>
