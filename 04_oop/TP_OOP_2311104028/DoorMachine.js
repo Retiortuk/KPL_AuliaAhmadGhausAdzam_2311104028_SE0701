@@ -18,3 +18,4 @@ class DoorMachine {
         }
     }
 }
+module.exports = { DoorMachine };

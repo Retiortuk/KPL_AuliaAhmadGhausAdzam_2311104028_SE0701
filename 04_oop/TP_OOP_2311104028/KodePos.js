@@ -16,4 +16,6 @@ const KodePosMap = {
 
 function getKodePos(kelurahan) {
     return KodePosMap[kelurahan] || 'Kode Pos Tidak Ada';
-}
+};
+
+module.exports = { getKodePos };
