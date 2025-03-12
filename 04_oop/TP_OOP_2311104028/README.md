@@ -2,6 +2,7 @@
 
 ## Deskripsi TP
 <h3>Coder: Aulia Ahmad Ghaus Adzam | 2311104028</h3>
+
 Proyek ini dibuat sebagai tugas pendahuluan untuk praktikum KPL menggunakan JavaScript. Program ini terdiri dari dua bagian utama:
 1. **Implementasi Table-Driven** (menggunakan objek untuk penyimpanan data).
 2. **Implementasi State-Based Construction** (menggunakan class untuk mengelola state).
@@ -32,7 +33,7 @@ function getKodePos(kelurahan) {
 
 module.exports = { getKodePos };
 ```
-<p>asdasdasdasd</p>
+<p>Pertama di dalam File ini kita buat objek yang berisikan data kelurahan beserta Kode pos nya lalu kita buat function <strong>getKodePos</strong> yang isi nya menyimpan kodePosMap.</p>
 ---
 
 ### 2. DoorMachine.js (State-Based Construction)
@@ -60,6 +61,10 @@ class DoorMachine {
 
 module.exports = { DoorMachine };
 ```
+<p><strong>constructor()</strong>: Menginisialisasi state awal sebagai 'TERKUNCI' dan menampilkan pesan Pintu terkunci.<br>
+<strong>bukaPintu()</strong>: Mengubah state dari 'TERKUNCI' ke 'TERBUKA'. Menampilkan pesan Pintu tidak terkunci.</br>
+<strong>kunciPintu()</strong>: Mengubah state dari 'TERBUKA' ke 'TERKUNCI'. Menampilkan pesan Pintu terkunci.</p>
+
 ---
 
 ### 3. Main.js
@@ -76,6 +81,7 @@ const door = new DoorMachine();
 door.bukaPintu();
 door.kunciPintu();
 ```
+<p><strong>Main.js</strong> adalah file utama yang digunakan untuk menggabungkan dan menjalankan kedua implementasi: Table-Driven dan State-Based Construction.</p>
 
 ---
 
@@ -97,16 +103,4 @@ Pintu terkunci
 ```
 
 ---
-
-## 📖 Penjelasan Singkat
-Program ini menggunakan pendekatan **Table-Driven** untuk mengelola data dengan mudah dan pendekatan **State-Based Construction** untuk mengelola perubahan keadaan secara terstruktur. Program ini berjalan di lingkungan Node.js dan menampilkan hasilnya di console.
-
----
-
-## 📌 Cara Menjalankan
-1. Pastikan Node.js terinstall di komputer.
-2. Simpan file-file (`KodePos.js`, `DoorMachine.js`, `Main.js`) dalam satu folder.
-3. Jalankan program dengan perintah:
-```
-node Main.js
-```
+<h1 style ='text-align: center'>Terima Kasih :)</h1>
