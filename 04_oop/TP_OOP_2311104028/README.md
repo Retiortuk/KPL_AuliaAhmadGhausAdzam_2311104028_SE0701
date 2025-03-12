@@ -1,7 +1,7 @@
 # Tugas Pendahuluan Modul 4
 
 ## Deskripsi TP
-Coder: Aulia Ahmad Ghaus Adzam | 2311104028
+<h3>Coder: Aulia Ahmad Ghaus Adzam | 2311104028</h3>
 Proyek ini dibuat sebagai tugas pendahuluan untuk praktikum KPL menggunakan JavaScript. Program ini terdiri dari dua bagian utama:
 1. **Implementasi Table-Driven** (menggunakan objek untuk penyimpanan data).
 2. **Implementasi State-Based Construction** (menggunakan class untuk mengelola state).
@@ -32,7 +32,7 @@ function getKodePos(kelurahan) {
 
 module.exports = { getKodePos };
 ```
-asdasdasdasd
+<p>asdasdasdasd</p>
 ---
 
 ### 2. DoorMachine.js (State-Based Construction)
