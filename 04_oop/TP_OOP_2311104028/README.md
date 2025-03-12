@@ -1,40 +1,81 @@
 # Tugas Pendahuluan Modul 4
 
-## 📌 Deskripsi Proyek
-Proyek ini dibuat sebagai tugas pendahuluan untuk praktikum Web Development menggunakan JavaScript. Program ini terdiri dari dua bagian utama:
+## Deskripsi TP
+Coder: Aulia Ahmad Ghaus Adzam | 2311104028
+Proyek ini dibuat sebagai tugas pendahuluan untuk praktikum KPL menggunakan JavaScript. Program ini terdiri dari dua bagian utama:
 1. **Implementasi Table-Driven** (menggunakan objek untuk penyimpanan data).
 2. **Implementasi State-Based Construction** (menggunakan class untuk mengelola state).
 
 ---
 
-## 📁 Struktur Proyek
-```
-|-- KodePos.js        (Implementasi Table-Driven)
-|-- DoorMachine.js    (Implementasi State-Based Construction)
-|-- Main.js           (File utama untuk menjalankan program)
-```
-
----
-
-## 📂 Penjelasan Source Code
+## Penjelasan Source Code
 
 ### 1. KodePos.js (Table-Driven Implementation)
-Pada file ini, digunakan sebuah objek `kodePosMap` untuk menyimpan data kode pos dari berbagai kelurahan. Proses pencarian kode pos dilakukan dengan fungsi `getKodePos()` yang mengakses data berdasarkan nama kelurahan.
-
-Contoh penggunaan:
 ```javascript
-getKodePos('Batununggal'); // Output: '40266'
+const kodePosMap = {
+    'Batununggal': '40266',
+    'Kujangsari': '40287',
+    'Mengger': '40267',
+    'Wates': '40256',
+    'Cijaura': '40287',
+    'Jatisari': '40286',
+    'Margasari': '40286',
+    'Sekejati': '40286',
+    'Kebonwaru': '40272',
+    'Maleer': '40274',
+    'Samoja': '40273'
+};
+
+function getKodePos(kelurahan) {
+    return kodePosMap[kelurahan] || 'Kode pos tidak ditemukan';
+}
+
+module.exports = { getKodePos };
 ```
+asdasdasdasd
+---
 
 ### 2. DoorMachine.js (State-Based Construction)
-Di file ini, dibuat sebuah class `DoorMachine` dengan dua state utama:
-- **'TERKUNCI'** (State awal, menunjukkan bahwa pintu dalam kondisi terkunci).
-- **'TERBUKA'** (State yang muncul ketika pintu dibuka).
+```javascript
+class DoorMachine {
+    constructor() {
+        this.state = 'TERKUNCI';
+        console.log('Pintu terkunci');
+    }
 
-Perubahan state dilakukan dengan metode `bukaPintu()` dan `kunciPintu()`.
+    bukaPintu() {
+        if (this.state === 'TERKUNCI') {
+            this.state = 'TERBUKA';
+            console.log('Pintu tidak terkunci');
+        }
+    }
+
+    kunciPintu() {
+        if (this.state === 'TERBUKA') {
+            this.state = 'TERKUNCI';
+            console.log('Pintu terkunci');
+        }
+    }
+}
+
+module.exports = { DoorMachine };
+```
+---
 
 ### 3. Main.js
-File ini menggabungkan kedua implementasi di atas dengan menggunakan `require()` untuk mengimpor fungsi dari file lain.
+```javascript
+const { getKodePos } = require('./KodePos');
+const { DoorMachine } = require('./DoorMachine');
+
+console.log('--- Demonstrasi Table-Driven ---');
+console.log('Kode Pos untuk Batununggal: ' + getKodePos('Batununggal'));
+console.log('Kode Pos untuk Kujangsari: ' + getKodePos('Kujangsari'));
+
+console.log('\n--- Demonstrasi State-Based Construction ---');
+const door = new DoorMachine();
+door.bukaPintu();
+door.kunciPintu();
+```
 
 ---
 
@@ -68,3 +109,4 @@ Program ini menggunakan pendekatan **Table-Driven** untuk mengelola data dengan 
 3. Jalankan program dengan perintah:
 ```
 node Main.js
+```
