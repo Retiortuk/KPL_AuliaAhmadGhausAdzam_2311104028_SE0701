@@ -42,4 +42,4 @@ class PosisiKarakterGame{
     }
 }
 
-module.export = { PosisiKarakterGame };
+module.exports = { PosisiKarakterGame };

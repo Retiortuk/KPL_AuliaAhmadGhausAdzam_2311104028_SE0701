@@ -19,4 +19,4 @@ function getKodeBuah(kodeBuah){
     return DataBuahMap[kodeBuah] || 'Data Buah Tidak ditemukan';
 };
 
-module.export = { getKodeBuah };
+module.exports = { getKodeBuah };
