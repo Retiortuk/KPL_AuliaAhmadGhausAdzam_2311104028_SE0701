@@ -1,9 +1,9 @@
-# Tugas Pendahuluan Modul 2
+# Tugas Jurnal Modul 2
 
-## Deskripsi TP
+## Deskripsi Jurnal
 <h3>Coder: Aulia Ahmad Ghaus Adzam | 2311104028</h3>
 
-Proyek ini dibuat sebagai tugas pendahuluan untuk praktikum KPL menggunakan JavaScript. Program ini terdiri dari dua bagian utama:
+Proyek ini dibuat sebagai tugas jurnal untuk praktikum KPL menggunakan JavaScript. Program ini terdiri dari dua bagian utama:
 1. **Implementasi Iput-Output**.
 2. **Implementasi Array** (menggunakan array untuk menyimpan data).
 2. **Implementasi Percabangan dan Perulangan**.
