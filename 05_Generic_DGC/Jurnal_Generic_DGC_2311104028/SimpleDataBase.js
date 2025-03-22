@@ -1,6 +1,3 @@
-// Nama file: modul5_2311104028.js
-
-// Kelas Penjumlahan
 class Penjumlahan {
     static JumlahTigaAngka(a, b, c) {
         if (typeof a === 'number' && typeof b === 'number' && typeof c === 'number') {
@@ -10,12 +7,9 @@ class Penjumlahan {
     }
 }
 
-// Memanggil method JumlahTigaAngka sesuai dengan ketentuan
 const hasilPenjumlahan = Penjumlahan.JumlahTigaAngka(12, 40, 28);
 console.log(`Hasil penjumlahan: ${hasilPenjumlahan}`);
 
-
-// Kelas SimpleDataBase
 class SimpleDataBase {
     constructor() {
         this.storedData = [];
@@ -37,7 +31,6 @@ class SimpleDataBase {
         }
     }
 }
-
 
 const database = new SimpleDataBase();
 database.AddNewData(12);
