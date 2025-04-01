@@ -1,3 +1,4 @@
+const SayaTubeVideo = require("./SayaTubeVideo");
 class SayaTubeUser {
     constructor(username) {
         if (!username || username.length > 100) {
@@ -25,20 +26,5 @@ class SayaTubeUser {
         }
     }
 }
+module.exports = SayaTubeUser;
 
-try {
-    let user = new SayaTubeUser("Nama_Panggilan");
-    let video1 = new SayaTubeVideo("Review Film Interstellar oleh Nama_Panggilan");
-    let video2 = new SayaTubeVideo("Review Film Inception oleh Nama_Panggilan");
-
-    video1.increasePlayCount(100);
-    video2.increasePlayCount(200);
-
-    user.addVideo(video1);
-    user.addVideo(video2);
-
-    user.printAllVideoPlaycount();
-    console.log("Total play count:", user.getTotalVideoPlayCount());
-} catch (error) {
-    console.error("Terjadi kesalahan:", error.message);
-}

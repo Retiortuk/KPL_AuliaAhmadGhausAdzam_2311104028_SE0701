@@ -23,3 +23,4 @@ class SayaTubeVideo {
         console.log(`Play Count: ${this.playCount}`);
     }
 }
+module.exports = SayaTubeVideo;
