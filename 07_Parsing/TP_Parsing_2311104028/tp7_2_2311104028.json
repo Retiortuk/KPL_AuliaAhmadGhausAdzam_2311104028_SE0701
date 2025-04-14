@@ -1,0 +1,32 @@
+{
+    "courses": [
+		{
+			"code": "CRI2C4",
+			"name": "Konstruksi Perangkat Lunak"
+		},
+		{
+			"code": "CC204",
+			"name": "Basis Data"
+		},
+		{
+			"code": "CC205",
+			"name": "Arsitektur Desain Dan Perangkat Lunak"
+		},
+		{
+			"code": "CC206",
+			"name": "Interaksi Manusia Komputer"
+		},
+		{
+			"code": "CC207",
+			"name": "Rekayasa Kebutuhan Perangkat Lunak"
+		},
+		{
+			"code": "CC208",
+			"name": "Proyek Tingkat II"
+		},
+		{
+			"code": "CC209",
+			"name": "Pemodelan Perangkat Lunak"
+		}
+	]
+}
