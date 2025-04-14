@@ -1,0 +1,15 @@
+{
+    "firstName": "Aulia Ahmad",
+    "lastName": "Ghaus Adzam",
+    "gender": "male",
+    "age": 20,
+    "address": {
+        "streetAddress": "Melon v",
+        "city": "Bekasi",
+        "state": "West Java"
+    },
+    "courses": [
+        { "code": "CRI2C4", "name": "Konstruksi Perangkat Lunak" },
+        { "code": "CRI2XX", "name": "Kalkulus" }
+    ]
+}
