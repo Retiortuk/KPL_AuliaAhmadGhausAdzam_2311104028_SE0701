@@ -1,0 +1,39 @@
+{
+    "members" : [
+    {
+        "firstName": "Aulia Ahmad",
+        "lastName": "Ghaus Adzam",
+        "gender": "male",
+        "age": 20,
+        "nim": "2311104028"
+    },
+    {
+        "firstName": "Gaza Zidane",
+        "lastName": "Nurraihan",
+        "gender": "male",
+        "age": 20,
+        "nim": "5678568567"
+    },
+    {
+        "firstName": "Kelvin",
+        "lastName": "Ferdinand",
+        "gender": "male",
+        "age": 20,
+        "nim": "456754675"
+    },
+    {
+        "firstName": "Kevin",
+        "lastName": "Johnson",
+        "gender": "male",
+        "age": 20,
+        "nim": "456754675"
+    },
+    {
+        "firstName": "Satria",
+        "lastName": "Ramadhan",
+        "gender": "male",
+        "age": 20,
+        "nim": "456754675"
+    }
+    ]
+}
