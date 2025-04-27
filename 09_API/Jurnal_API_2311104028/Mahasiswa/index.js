@@ -1,4 +1,3 @@
-// Import express dan swagger
 const express = require('express');
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
@@ -6,10 +5,9 @@ const swaggerJSDoc = require('swagger-jsdoc');
 const app = express();
 const port = 3000; 
 
-// Supaya bisa parsing JSON body
 app.use(express.json());
 
-// Static list of Mahasiswa
+
 let mahasiswaList = [
   { name: 'Aulia Ahmad Ghaus Adzam', nim: '2311104028', course: ['Software Engineer', 'API Developer'], year: 2023 },
   { name: 'Ghaza Zidane Nurraihan', nim: '2311104038', course: ['Designer', 'UI/UX'], year: 2023 },
@@ -18,7 +16,7 @@ let mahasiswaList = [
   { name: 'Kevin Jonson', nim: '23111040', course: ['Frontend Development', 'UI/UX'], year: 2023 }
 ];
 
-// Swagger setup
+
 const swaggerOptions = {
   definition: {
     openapi: '3.0.0',
@@ -33,7 +31,7 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ['./index.js'], // File untuk membaca anotasi Swagger
+  apis: ['./index.js'], 
 };
 
 const swaggerSpec = swaggerJSDoc(swaggerOptions);
@@ -121,12 +119,12 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
  *         description: Mahasiswa not found
  */
 
-// GET /api/mahasiswa - Ambil semua mahasiswa
+
 app.get('/api/mahasiswa', (req, res) => {
   res.json(mahasiswaList);
 });
 
-// GET /api/mahasiswa/:id - Ambil mahasiswa berdasarkan index
+
 app.get('/api/mahasiswa/:id', (req, res) => {
   const id = parseInt(req.params.id);
   if (id >= 0 && id < mahasiswaList.length) {
@@ -136,14 +134,14 @@ app.get('/api/mahasiswa/:id', (req, res) => {
   }
 });
 
-// POST /api/mahasiswa - Tambah mahasiswa baru
+
 app.post('/api/mahasiswa', (req, res) => {
   const newMahasiswa = req.body;
   mahasiswaList.push(newMahasiswa);
   res.status(201).send('Mahasiswa added');
 });
 
-// DELETE /api/mahasiswa/:id - Hapus mahasiswa berdasarkan index
+
 app.delete('/api/mahasiswa/:id', (req, res) => {
   const id = parseInt(req.params.id);
   if (id >= 0 && id < mahasiswaList.length) {
@@ -154,7 +152,6 @@ app.delete('/api/mahasiswa/:id', (req, res) => {
   }
 });
 
-// Run server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
   console.log(`Swagger docs at http://localhost:${port}/api-docs`);
